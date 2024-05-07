@@ -53,7 +53,7 @@ public abstract class AbstractInstanceViewController extends AbstractViewControl
     elementIdsForKeys.put(instance.getKey(), instance.getBpmnProcessId());
 
     final List<ElementInstanceEntity> events = loadElementInstanceEntities(instance);
-    events.forEach(e -> elementIdsForKeys.put(e.getKey(), e.getElementId()));
+    events.forEach(e -> elementIdsForKeys.put(e.getKey() /* record.getKey() */, e.getElementId() /* ProcessInstanceRecordValue.getElementId() */));
 
     final List<IncidentEntity> incidents = loadIncidents(instance);
 

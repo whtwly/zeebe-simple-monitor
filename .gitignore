@@ -34,4 +34,4 @@ hs_err*.log
 replay_pid*.log
 /data/
 /metrics/
-docker/**/*.jar
+#docker/**/*.jar
